@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Daily Planner</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div>
+                <p class="small-title">YOUR DAILY PLANNER</p>
+
+                <h1 id="dayName">Today</h1>
+
+                <p id="date"></p>
+            </div>
+
+            <div class="calendar-icon">
+                
+            </div>
+
+        </header>
+
+
+        <!-- Advice Section -->
+        <section class="advice-card">
+
+            <div class="advice-icon">
+                💡
+            </div>
+
+            <div>
+                <p class="section-label">TODAY'S ADVICE</p>
+
+                <h2 id="advice">
+                    Your daily advice will appear here.
+                </h2>
+            </div>
+
+        </section>
+
+
+        <!-- Task Form -->
+        <section class="task-card">
+
+            <h2>Add a Task</h2>
+
+            <p class="description">
+                Plan something you want to accomplish today.
+            </p>
+
+            <form id="taskForm">
+
+                <div class="input-group">
+
+                    <label for="taskInput">
+                        Task
+                    </label>
+
+                    <input
+                        type="text"
+                        id="taskInput"
+                        placeholder="e.g. Complete JavaScript lesson"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="deadlineInput">
+                        Deadline
+                    </label>
+
+                    <input
+                        type="datetime-local"
+                        id="deadlineInput"
+                        required
+                    >
+
+                </div>
+
+
+                <button type="submit" class="add-button">
+                    + Add Task
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="stat-box">
+
+                <span id="totalTasks">
+                    0
+                </span>
+
+                <p>Total Tasks</p>
+
+            </div>
+
+
+            <div class="stat-box">
+
+                <span id="completedTasks">
+                    0
+                </span>
+
+                <p>Completed</p>
+
+            </div>
+
+
+            <div class="stat-box">
+
+                <span id="pendingTasks">
+                    0
+                </span>
+
+                <p>Pending</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Task List -->
+        <section class="tasks-section">
+
+            <div class="tasks-heading">
+
+                <h2>My Tasks</h2>
+
+                <span id="taskCount">
+                    0 tasks
+                </span>
+
+            </div>
+
+
+            <div id="taskList">
+
+                <div class="empty-message">
+                    <span>📝</span>
+
+                    <p>
+                        No tasks yet. Add your first task!
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
